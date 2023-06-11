@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "Inter-Regular";
+  src: url("assets/fonts/static/Inter-Regular.ttf");
+}
+@font-face {
+  font-family: "Inter-SemiBold";
+  src: url("assets/fonts/static/Inter-SemiBold.ttf");
+}
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter-Regular";
+}
