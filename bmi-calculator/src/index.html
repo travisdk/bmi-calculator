@@ -17,7 +17,8 @@
       <header class="header">
         <img src="./assets/images/logo.svg" class="logo" alt="Logo image" />
         <h1 class="heading heading-l color-gunmetal">
-          Body Mass Index Calculator
+          Body Mass<br class="splitter" />
+          Index Calculator
         </h1>
         <p class="text-body text-body-m color-dark-electric-blue">
           Better understand your weight in relation to your height using our
@@ -50,10 +51,9 @@
             Imperial
           </label>
         </div>
-
         <!-- METRIC PART -->
         <div id="metric">
-          <div class="inputs">
+          <div class="mets">
             <div class="num-container metric-cm">
               <label class="input-numeric-label" for="height-input"
                 >Height</label
@@ -77,59 +77,58 @@
                 id="weight-input-metric" />
             </div>
           </div>
-
-          <!-- IMPERIAL PART -->
-          <div id="imperial">
-            <div class="imps">
-              <div class="num-container imperial-feet">
-                <label class="input-numeric-label">Height</label>
-                <input
-                  class="input-numeric"
-                  type="text"
-                  value="5"
-                  name="height-input-imperial-feet"
-                  id="height-input-imperial-feet" />
-              </div>
-              <div class="num-container imperial-inches">
-                <input
-                  class="input-numeric"
-                  type="text"
-                  value="85"
-                  name="height-input-imperial-inches"
-                  id="height-input-imperial-inches" />
-              </div>
+        </div>
+        <!-- IMPERIAL PART -->
+        <div id="imperial">
+          <div class="imps">
+            <div class="num-container imperial-feet">
+              <label class="input-numeric-label">Height</label>
+              <input
+                class="input-numeric"
+                type="text"
+                value="5"
+                name="height-input-imperial-feet"
+                id="height-input-imperial-feet" />
             </div>
-            <div class="imps">
-              <div class="num-container imperial-stones">
-                <label class="input-numeric-label">Weight</label>
-                <input
-                  class="input-numeric"
-                  type="text"
-                  value="5"
-                  name="weight-input-imperial-stones"
-                  id="weight-input-imperial-stones" />
-              </div>
-              <div class="num-container imperial-lbs">
-                <input
-                  class="input-numeric"
-                  type="text"
-                  value="85"
-                  name="weight-input-imperial-lbs"
-                  id="weight-input-imperial-lbs" />
-              </div>
+            <div class="num-container imperial-inches">
+              <input
+                class="input-numeric"
+                type="text"
+                value="85"
+                name="height-input-imperial-inches"
+                id="height-input-imperial-inches" />
             </div>
           </div>
-          <div class="calc-output bg-blue color-pure-white">
+          <div class="imps">
+            <div class="num-container imperial-stones">
+              <label class="input-numeric-label">Weight</label>
+              <input
+                class="input-numeric"
+                type="text"
+                value="5"
+                name="weight-input-imperial-stones"
+                id="weight-input-imperial-stones" />
+            </div>
+            <div class="num-container imperial-lbs">
+              <input
+                class="input-numeric"
+                type="text"
+                value="85"
+                name="weight-input-imperial-lbs"
+                id="weight-input-imperial-lbs" />
+            </div>
+          </div>
+        </div>
+        <div class="calc-output color-pure-white">
+          <div>
             <h3 class="text-body text-body-m">Your BMI is...</h3>
             <h2 id="bmi-value" class="heading heading-l">23.4</h2>
-            <p class="text-body text-body-s">
-              Your BMI suggests you’re a healthy weight. Your ideal weight is
-              between
-              <span class="bmi-suggest" id="bmi-suggest"
-                >63.3kgs - 85.2kgs.</span
-              >
-            </p>
           </div>
+          <p class="text-body text-body-s">
+            Your BMI suggests you’re a healthy weight. Your ideal weight is
+            between
+            <span class="bmi-suggest" id="bmi-suggest">63.3kgs - 85.2kgs.</span>
+          </p>
         </div>
       </div>
 
@@ -138,18 +137,20 @@
           src="assets/images/image-man-eating.webp"
           alt=""
           class="hero-img" />
+        <div class="result-meaning margins color-dark-electric-blue">
+          <h3 class="heading heading-m">What your BMI result means</h3>
+          <p class="text-body-m">
+            A BMI range of 18.5 to 24.9 is considered a 'healthy weight.'
+            Maintaining a healthy weight may lower your chances of experiencing
+            health issues later on, such as obesity and type 2 diabetes. Aim for
+            a nutritious diet with reduced fat and sugar content, incorporating
+            ample fruits and vegetables. Additionally, strive for regular
+            physical activity, ideally about 30 minutes daily for five days a
+            week.
+          </p>
+        </div>
       </div>
-      <div class="result-meaning margins color-dark-electric-blue">
-        <h3 class="heading heading-m">What your BMI result means</h3>
-        <p class="text-body-m">
-          A BMI range of 18.5 to 24.9 is considered a 'healthy weight.'
-          Maintaining a healthy weight may lower your chances of experiencing
-          health issues later on, such as obesity and type 2 diabetes. Aim for a
-          nutritious diet with reduced fat and sugar content, incorporating
-          ample fruits and vegetables. Additionally, strive for regular physical
-          activity, ideally about 30 minutes daily for five days a week.
-        </p>
-      </div>
+
       <div class="suggestions color-gunmetal">
         <div class="suggestion-card">
           <img
