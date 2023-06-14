@@ -253,6 +253,9 @@ body {
   margin-top: 32px;
   margin-bottom: 32px;
 }
+.limitations {
+  text-align: center;
+}
 .limitations-list {
   display: flex;
   flex-direction: column;
@@ -343,12 +346,48 @@ body {
   }
   .hero {
     flex-direction: row;
+    align-items: center;
     gap: 30px;
-    margin-top: 200px;
+    margin-top: 300px;
   }
   .hero-img {
     width: 60%;
+    max-width: 435px;
     margin-left: -10%;
+  }
+  .suggestions {
+    margin-top: 70px;
+  }
+  .suggestion-card {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+  .suggestion-image {
+    margin: 0;
+    flex-basis: 15%;
+  }
+  .suggestion-text {
+    max-width: 800px;
+    justify-self: flex-start;
+    flex-basis: 80%;
+  }
+  .limitations-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: var(--tablet-spacing);
+    gap: 24px 15px;
+  }
+  .limitation-card {
+    flex: 1;
+    min-width: 335px;
+    max-width: 365px;
+    margin-bottom: 0px;
+    justify-content: flex-start;
+    padding: var(--tablet-spacing);
   }
   .splitter {
     display: block;
