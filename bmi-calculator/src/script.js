@@ -28,12 +28,12 @@ const app = async () => {
 };
 
 const registerListeners = () => {
-  const allInputs = document.querySelectorAll('input[type="number"]');
-  allInputs.forEach((input) =>
+  const allInputs = document.querySelectorAll(".input-numeric");
+  allInputs.forEach((input) => {
     input.addEventListener("focus", (e) => {
       input.select();
-    })
-  );
+    });
+  });
   metricRadio.addEventListener("change", (e) => {
     isMetricSelected = true;
     isImperialSelected = false;
