@@ -32,7 +32,7 @@
           Enter your details below
         </h3>
         <div class="unit-selector">
-          <label for="metric" class="text-body text-body-m-bold">
+          <label for="metric-radio" class="text-body text-body-m-bold">
             <input
               class="radio"
               type="radio"
@@ -41,7 +41,7 @@
               value="metric" />
             Metric
           </label>
-          <label for="imperial" class="text-body text-body-m-bold">
+          <label for="imperial-radio" class="text-body text-body-m-bold">
             <input
               class="radio"
               type="radio"
@@ -55,7 +55,7 @@
         <div id="metric">
           <div class="mets">
             <div class="num-container metric-cm">
-              <label class="input-numeric-label" for="height-input"
+              <label class="input-numeric-label" for="height-input-metric"
                 >Height</label
               >
               <input
@@ -66,7 +66,7 @@
                 id="height-input-metric" />
             </div>
             <div class="num-container metric-kg">
-              <label class="input-numeric-label" for="weight-input"
+              <label class="input-numeric-label" for="weight-input-metric"
                 >Weight</label
               >
               <input
@@ -82,7 +82,11 @@
         <div id="imperial">
           <div class="imps">
             <div class="num-container imperial-feet">
-              <label class="input-numeric-label">Height</label>
+              <label
+                for="height-input-imperial-feet"
+                class="input-numeric-label"
+                >Height</label
+              >
               <input
                 class="input-numeric"
                 type="text"
@@ -101,7 +105,11 @@
           </div>
           <div class="imps">
             <div class="num-container imperial-stones">
-              <label class="input-numeric-label">Weight</label>
+              <label
+                for="weight-input-imperial-stones"
+                class="input-numeric-label"
+                >Weight</label
+              >
               <input
                 class="input-numeric"
                 type="text"
