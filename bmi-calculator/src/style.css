@@ -199,7 +199,7 @@ body {
   font-size: 20px;
   font-family: "Inter-SemiBold";
   padding-left: var(--mobile-spacing);
-  padding-right: 50px;
+  padding-right: 35%;
 }
 
 .input-numeric:focus {
