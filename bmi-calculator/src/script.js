@@ -20,6 +20,7 @@ const weightImperialStonesInput = document.querySelector(
 const weightImperialLbsInput = document.querySelector(
   "#weight-input-imperial-lbs"
 );
+const allInputs = document.querySelectorAll(".input-numeric");
 
 const app = async () => {
   registerListeners();
@@ -28,9 +29,8 @@ const app = async () => {
 };
 
 const registerListeners = () => {
-  const allInputs = document.querySelectorAll(".input-numeric");
   allInputs.forEach((input) => {
-    input.addEventListener("focus", (e) => {
+    input.addEventListener("click", (e) => {
       input.select();
     });
   });
@@ -45,6 +45,7 @@ const registerListeners = () => {
     isImperialSelected = true;
     changeUnit();
   });
+
   heightMetricInput.addEventListener("change", (e) => {
     height = e.target.value;
     setHeightInputs();
@@ -81,8 +82,8 @@ const registerListeners = () => {
     setWeightInputs();
   });
   weightImperialLbsInput.addEventListener("change", (e) => {
-    const stonesValue = weightImperialStonesInput.value;
     const lbsValue = e.target.value;
+    const stonesValue = weightImperialStonesInput.value;
     weight = calcWeight(stonesValue, lbsValue);
     setWeightInputs();
   });
@@ -97,6 +98,14 @@ const changeUnit = () => {
     imperialElement.style.display = "initial";
   }
 };
+function updateFilled() {
+  // probably a more effective way to do this..
+  for (let input of allInputs) {
+    input.value > 0
+      ? input.classList.add("filled")
+      : input.classList.remove("filled");
+  }
+}
 const setHeightInputs = () => {
   // updating the inputboxes values to reflect the height value
   heightMetricInput.value = height;
@@ -104,6 +113,7 @@ const setHeightInputs = () => {
   const inches = (height / 30.48 - wholeFeet) * 12;
   heightImperialFeetInput.value = wholeFeet;
   heightImperialInchesInput.value = inches;
+  updateFilled();
 };
 const setWeightInputs = () => {
   // updating the inputboxes values to reflect the weight value
@@ -112,5 +122,7 @@ const setWeightInputs = () => {
   const lbs = (weight / 6.35029318 - wholeStone) * 14;
   weightImperialStonesInput.value = wholeStone;
   weightImperialLbsInput.value = lbs;
+  updateFilled();
 };
+
 document.addEventListener("DOMContentLoaded", app);

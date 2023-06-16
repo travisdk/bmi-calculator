@@ -30,6 +30,19 @@
   box-sizing: border-box;
 }
 
+/* HIDE ARROWS FROM NUM INPUT */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 body {
   font-family: "Inter-Regular";
 }
@@ -191,6 +204,10 @@ body {
 
 .input-numeric:focus {
   outline: 1px solid var(--blue);
+  color: var(--blue);
+}
+.input-numeric.filled {
+  color: var(--blue);
 }
 
 .input-numeric-label {
